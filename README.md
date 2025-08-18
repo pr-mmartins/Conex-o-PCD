@@ -2,7 +2,7 @@
 
 ## Um Projeto de Inclusão para Profissionais PCD
 
-Este projeto é uma plataforma web desenvolvida como parte da Atividade Extensionista II: Tecnologia Aplicada à Inclusão Digital, para o curso de CST em Ciência de Dados do Centro Universitário Internacional UNINTERO objetivo principal é criar uma ponte entre profissionais com deficiência (PCDs) e empresas que buscam talentos, visando facilitar a inclusão e reduzir as desigualdades no mercado de trabalho, com foco inicial no estado do Ceará
+Este projeto é uma plataforma web desenvolvida como parte da Atividade Extensionista II: Tecnologia Aplicada à Inclusão Digital, para o curso de CST em Ciência de Dados do Centro Universitário Internacional UNINTER . O objetivo principal é criar uma ponte entre profissionais com deficiência (PCDs) e empresas que buscam talentos, visando facilitar a inclusão e reduzir as desigualdades no mercado de trabalho, com foco inicial no estado do Ceará
 
 A plataforma aborda desafios como a adequação do perfil ao cargo e a falta de informação sobre as necessidades de acessibilidade dos candidatos, problemas que dificultam a contratação de profissionais PCD.
 
