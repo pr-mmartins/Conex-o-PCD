@@ -2,9 +2,9 @@
 
 ## Um Projeto de Inclusão para Profissionais PCD
 
-Este projeto é uma plataforma web desenvolvida como parte da Atividade Extensionista II: Tecnologia Aplicada à Inclusão Digital, para o curso de CST em Ciência de Dados do Centro Universitário Internacional UNINTER[cite: 1, 14, 23]. [cite_start]O objetivo principal é criar uma ponte entre profissionais com deficiência (PCDs) e empresas que buscam talentos, visando facilitar a inclusão e reduzir as desigualdades no mercado de trabalho, com foco inicial no estado do Ceará[cite: 41, 52, 90].
+Este projeto é uma plataforma web desenvolvida como parte da Atividade Extensionista II: Tecnologia Aplicada à Inclusão Digital, para o curso de CST em Ciência de Dados do Centro Universitário Internacional UNINTERO objetivo principal é criar uma ponte entre profissionais com deficiência (PCDs) e empresas que buscam talentos, visando facilitar a inclusão e reduzir as desigualdades no mercado de trabalho, com foco inicial no estado do Ceará
 
-[cite_start]A plataforma aborda desafios como a adequação do perfil ao cargo e a falta de informação sobre as necessidades de acessibilidade dos candidatos, problemas que dificultam a contratação de profissionais PCD[cite: 88].
+A plataforma aborda desafios como a adequação do perfil ao cargo e a falta de informação sobre as necessidades de acessibilidade dos candidatos, problemas que dificultam a contratação de profissionais PCD.
 
 ---
 
@@ -14,8 +14,8 @@ Este projeto é uma plataforma web desenvolvida como parte da Atividade Extensio
     * Dados de contato.
     * Formação acadêmica e experiências profissionais.
     * Habilidades e competências.
-    * [cite_start]Tipo de deficiência e um campo dedicado para descrever necessidades específicas para o ambiente de trabalho ou entrevistas[cite: 66, 71].
-* [cite_start]**Banco de Dados Centralizado:** As informações são armazenadas de forma organizada em um banco de dados SQLite, criando um valioso banco de talentos[cite: 66, 67].
+    * Tipo de deficiência e um campo dedicado para descrever necessidades específicas para o ambiente de trabalho ou entrevistas
+* **Banco de Dados Centralizado:** As informações são armazenadas de forma organizada em um banco de dados SQLite, criando um valioso banco de talentos
 * **Interface Acessível:** Design limpo e direto para garantir uma experiência de usuário simples e eficaz.
 * **Página de Sucesso:** Confirmação visual para o usuário após o envio bem-sucedido do cadastro.
 
