@@ -13,11 +13,11 @@ def get_db_connection():
     conn = psycopg2.connect(DATABASE_URL)
     return conn
 
-# A função init_db agora usa a conexão do PostgreSQL
+# A função init_db usa a conexão do PostgreSQL
 def init_db():
     conn = get_db_connection()
     cursor = conn.cursor()
-    # O SQL para criar a tabela é o mesmo
+    # O SQL para criar a tabela
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS profissionais_pcd (
             id SERIAL PRIMARY KEY,
@@ -37,7 +37,7 @@ def init_db():
     conn.close()
     print("Tabela 'profissionais_pcd' verificada/criada no PostgreSQL.")
 
-# O resto do seu código permanece praticamente o mesmo
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -74,10 +74,21 @@ def cadastrar():
 def sucesso():
     return render_template('sucesso.html')
 
+@app.route('/visualizar-cadastros')
+def visualizar_cadastros():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM profissionais_pcd ORDER BY data_cadastro DESC;')
+    profissionais = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return render_template('visualizar.html', profissionais=profissionais)
+    
 if __name__ == '__main__':
-    # Não precisamos mais chamar init_db() aqui, faremos isso de outra forma
+    
     app.run(debug=True)
 if __name__ == '__main__':
     init_db()
 
     app.run(debug=True)
+
