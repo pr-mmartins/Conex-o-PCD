@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastros Realizados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Estilos */
+        .tabela-cadastros {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            color: #333; /* Texto escuro para legibilidade na tabela */
+            background-color: #fff; /* Fundo branco para a tabela */
+        }
+        .tabela-cadastros th, .tabela-cadastros td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .tabela-cadastros th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .tabela-cadastros tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Profissionais Cadastrados</h1>
+        <p>Abaixo está a lista de todos os perfis enviados para a plataforma.</p>
+
+        <div style="overflow-x: auto;"> <table class="tabela-cadastros">
+                <thead>
+                    <tr>
+                        <th>Nome Completo</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Deficiência</th>
+                        <th>Data do Cadastro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for profissional in profissionais %}
+                    <tr>
+                        <td>{{ profissional[1] }}</td>
+                        <td>{{ profissional[2] }}</td>
+                        <td>{{ profissional[3] }}</td>
+                        <td>{{ profissional[7] }}</td>
+                        <td>{{ profissional[9].strftime('%d/%m/%Y %H:%M') }}</td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="5">Nenhum cadastro encontrado.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <a href="/">Voltar para a Página Inicial</a>
+    </div>
+</body>
+</html>
