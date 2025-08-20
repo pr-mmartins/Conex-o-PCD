@@ -9,8 +9,10 @@ app = Flask(__name__)
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
 def get_db_connection():
-    # Usa psycopg2 para conectar ao PostgreSQL
-    conn = psycopg2.connect(DATABASE_URL)
+    url = os.environ.get("DATABASE_URL")  # pega a variável de ambiente do Render
+    if url.startswith("postgres://"):
+        url = url.replace("postgres://", "postgresql://", 1)  # corrige prefixo
+    conn = psycopg2.connect(url)
     return conn
 
 # A função init_db usa a conexão do PostgreSQL
@@ -93,6 +95,7 @@ if __name__ == '__main__':
     init_db()
     
     app.run(debug=True)
+
 
 
 
