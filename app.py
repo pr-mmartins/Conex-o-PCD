@@ -89,7 +89,10 @@ def visualizar_cadastros():
     return render_template('visualizar.html', profissionais=profissionais)
     
 if __name__ == '__main__':
+    
     init_db()
+    
     app.run(debug=True)
+
 
 
