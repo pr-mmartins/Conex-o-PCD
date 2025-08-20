@@ -42,6 +42,10 @@ def init_db():
 def index():
     return render_template('index.html')
 
+@app.route('/teste-deploy')
+def teste_deploy():
+    return "Se você está vendo isso, o deploy do app.py funcionou!"
+
 @app.route('/cadastro')
 def cadastro():
     return render_template('cadastro.html')
@@ -87,4 +91,5 @@ def visualizar_cadastros():
 if __name__ == '__main__':
     init_db()
     app.run(debug=True)
+
 
